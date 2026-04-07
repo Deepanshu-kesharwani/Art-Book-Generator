@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: artbook-backend
+    env_file:
+      - .env
+    volumes:
+      - ./outputs:/app/backend/outputs
+    expose:
+      - "8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: artbook-frontend
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend

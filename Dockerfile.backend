@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy full project (backend needs utils, services, etc.)
+COPY backend /app/backend
+COPY requirements.txt /app
+
+WORKDIR /app/backend
+
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Create outputs directory (important for your file system logic)
+RUN mkdir -p /app/backend/outputs
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
