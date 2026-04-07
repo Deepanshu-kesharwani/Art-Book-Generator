@@ -1,14 +1,3 @@
-# from pydantic import BaseModel
-#
-# class ChatRequest(BaseModel):
-#     message: str
-#
-# class GenerateRequest(BaseModel):
-#     theme: str
-#     num_pages: int
-#     style: str
-#     aspect_ratio: str
-
 
 
 from pydantic import BaseModel

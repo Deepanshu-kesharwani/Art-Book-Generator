@@ -1,8 +1,8 @@
 
 
 from fastapi import APIRouter, Request
-from models.schemas import ChatRequest
-from services.openrouter_service import chat_with_ai
+from backend.models.schemas import ChatRequest
+from backend.services.openrouter_service import chat_with_ai
 import json
 
 router = APIRouter()
