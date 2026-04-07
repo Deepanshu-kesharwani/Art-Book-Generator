@@ -2,11 +2,11 @@
 
 
 from fastapi import APIRouter
-from backend.models.schemas import GenerateRequest
-from backend.services.image_service import generate_image
-from backend.services.pdf_service import create_pdf
-from backend.services.prompt_agent import enhance_prompts
-from backend.utils.file_manager import (
+from models.schemas import GenerateRequest
+from services.image_service import generate_image
+from services.pdf_service import create_pdf
+from services.prompt_agent import enhance_prompts
+from utils.file_manager import (
     create_project_folder,
     get_image_path,
     get_pdf_path
