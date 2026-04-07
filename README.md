@@ -1,4 +1,4 @@
-# 🎨 Wizzy AI Art Book Generator
+# 🎨 Art Book Generator
 
 An AI-powered system that generates complete visual storybooks using Large Language Models (LLMs) and diffusion-based image generation.
 
@@ -67,8 +67,6 @@ ArtBookGenerator/
 │
 ├── frontend/
 │   └── app.py
-│
-├── outputs/                # ignored (generated files)
 │
 ├── Dockerfile.backend
 ├── Dockerfile.frontend
